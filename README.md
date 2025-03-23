@@ -1,6 +1,6 @@
 # Traductor Universal
 
-Puedes probar y usar el traductor en: [Traductor Universal](https://github.com/BrayanHuincho/Traductor_Universal)
+Puedes probar y usar el traductor en: [Traductor Universal](https://brayanhuincho.github.io/Traductor_Universal/)
 
 ## Características Principales
 

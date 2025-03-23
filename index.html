@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor Universal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <nav class="barra-navegacion">
+            <div class="contenedor-barra">
+                <div class="logo">
+                    <i class="bi bi-translate"></i>
+                    <span>Traductor Universal</span>
+                </div>
+                <div class="botones-navegacion">
+                    <button id="boton-modo-oscuro" class="boton-icono" aria-label="Cambiar modo oscuro">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="contenido-principal">
+            <div class="tarjeta-traduccion">
+                <div class="paneles-traduccion">
+                    <div class="panel panel-origen">
+                        <div class="selector-idioma">
+                            <select id="idioma-origen" class="selector">
+                                <option value="auto">Detectar idioma</option>
+                                <option value="es">Español</option>
+                                <option value="en">Inglés</option>
+                                <option value="fr">Francés</option>
+                                <option value="de">Alemán</option>
+                                <option value="it">Italiano</option>
+                                <option value="pt">Portugués</option>
+                                <option value="ru">Ruso</option>
+                                <option value="zh">Chino</option>
+                                <option value="ja">Japonés</option>
+                                <option value="ko">Coreano</option>
+                            </select>
+                        </div>
+                        
+                        <div class="contenedor-texto">
+                            <textarea id="texto-a-traducir" class="area-texto" placeholder="Escribe o pega texto aquí"></textarea>
+                            
+                            <div class="controles-texto">
+                                <div class="grupo-botones">
+                                    <button id="boton-voz" class="boton-control" title="Traducir por voz">
+                                        <i class="bi bi-mic"></i>
+                                    </button>
+                                    <button id="boton-limpiar" class="boton-control" title="Borrar texto">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </div>
+                                <div class="contador-caracteres">
+                                    <span id="contador">0/5000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contenedor-intercambiar">
+                        <button id="boton-intercambiar" class="boton-intercambiar" aria-label="Intercambiar idiomas">
+                            <i class="bi bi-arrow-left-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="panel panel-destino">
+                        <div class="selector-idioma">
+                            <select id="idioma-destino" class="selector">
+                                <option value="en">Inglés</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Francés</option>
+                                <option value="de">Alemán</option>
+                                <option value="it">Italiano</option>
+                                <option value="pt">Portugués</option>
+                                <option value="ru">Ruso</option>
+                                <option value="zh">Chino</option>
+                                <option value="ja">Japonés</option>
+                                <option value="ko">Coreano</option>
+                            </select>
+                        </div>
+                        
+                        <div class="contenedor-texto">
+                            <div id="texto-traducido" class="area-texto area-resultado">
+                                La traducción aparecerá aquí
+                            </div>
+                            
+                            <div class="controles-texto controles-derecha">
+                                <div class="grupo-botones">
+                                    <button id="boton-escuchar" class="boton-control" title="Escuchar traducción">
+                                        <i class="bi bi-volume-up"></i>
+                                    </button>
+                                    <button id="boton-copiar" class="boton-control" title="Copiar traducción">
+                                        <i class="bi bi-clipboard"></i>
+                                    </button>
+                                    <button id="boton-guardar" class="boton-control" title="Guardar traducción">
+                                        <i class="bi bi-star"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="seccion-historial">
+                <div class="encabezado-historial">
+                    <h5><i class="bi bi-clock-history"></i>Historial de traducciones</h5>
+                    <button id="boton-limpiar-historial" class="boton-texto">
+                        Limpiar todo
+                    </button>
+                </div>
+                
+                <div class="contenedor-historial">
+                    <div id="lista-historial" class="lista-historial">
+
+                    </div>
+                    
+                    <div id="historial-vacio" class="historial-vacio">
+                        <i class="bi bi-journal"></i>
+                        <p>Tu historial de traducciones aparecerá aquí</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

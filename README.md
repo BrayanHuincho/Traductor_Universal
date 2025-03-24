@@ -2,6 +2,12 @@
 
 Puedes probar y usar el traductor en: [Traductor Universal](https://brayanhuincho.github.io/Traductor_Universal/)
 
+<p align="center">
+  <a href="https://brayanhuincho.github.io/Traductor_Universal/">
+    <img src="foto.jpg" alt="Captura del Traductor" width="600">
+  </a>
+</p>
+
 ## Características Principales
 
 - **Traducción Multilingüe**: Traduce entre varios idiomas, incluyendo **Español**, **Inglés**, **Francés**, **Alemán**, y muchos más.
